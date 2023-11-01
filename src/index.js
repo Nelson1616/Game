@@ -3,7 +3,6 @@ const handlebars = require('express-handlebars');
 const logger = require("morgan");
 const sass = require('node-sass-middleware');
 
-const apiRouter = require('./routes/api.js');
 const appRouter = require('./routes/app.js');
 
 const port = 8080;
@@ -43,7 +42,6 @@ app.use('/webfonts', [
     express.static('./node_modules/@fortawesome/fontawesome-free/webfonts')
 ]);
 
-app.use('/api', apiRouter);
 app.use('/', appRouter);
 
 app.listen(port, () => {
