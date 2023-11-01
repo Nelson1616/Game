@@ -15,6 +15,10 @@ app.engine('handlebars', handlebars.engine());
 app.set('view engine', 'handlebars');
 app.set('views', './views');
 
+app.use('/images', [
+    express.static('./public/images')
+]);
+
 app.use('/api', apiRouter);
 app.use('/', appRouter);
 
