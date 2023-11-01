@@ -485,7 +485,7 @@
     }
 
     function collided(x1, y1, w1, l1, x2, y2, w2, l2) {
-        let ob1 = new Rectangle(x1, y1, w1, l1);
+        let ob1 = new Rectangle(x1 + 10, y1 + 10, w1 - 10, l1 - 10);
         let ob2 = new Rectangle(x2, y2, w2, l2);
 
         // console.log(ob1.p1);
