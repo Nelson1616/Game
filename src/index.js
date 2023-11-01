@@ -34,6 +34,11 @@ app.use('/css', [
     express.static('./public/css')
 ]);
 
+app.use('/js', [
+    express.static('./public/js'),
+    express.static('./node_modules/bootstrap/dist/js/')
+]);
+
 app.use('/webfonts', [
     express.static('./node_modules/@fortawesome/fontawesome-free/webfonts')
 ]);
