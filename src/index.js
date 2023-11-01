@@ -1,10 +1,14 @@
 import express from 'express';
-const app = express();
+import apiRouter from './routes/api.js';
+import appRouter from './routes/app.js';
+
 const port = 8080;
 
-app.get('/', (req, res) => {
-    res.send('Hello World!');
-});
+const app = express();
+
+app.use(express.json());
+app.use('/api', apiRouter);
+app.use('/', appRouter);
 
 app.listen(port, () => {
     console.log(`Example app listening on port ${port}`);
