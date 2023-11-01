@@ -1,10 +1,10 @@
-import express from 'express';
-import handlebars from 'express-handlebars';
-import logger from 'morgan';
-import sass from 'node-sass-middleware';
+const express = require('express');
+const handlebars = require('express-handlebars');
+const logger = require("morgan");
+const sass = require('node-sass-middleware');
 
-import apiRouter from './routes/api.js';
-import appRouter from './routes/app.js';
+const apiRouter = require('./routes/api.js');
+const appRouter = require('./routes/app.js');
 
 const port = 8080;
 
@@ -12,7 +12,7 @@ const app = express();
 
 app.use(express.json());
 
-app.use(logger('short'));
+app.use(logger("short"));
 
 app.engine('handlebars', handlebars.engine());
 app.set('view engine', 'handlebars');

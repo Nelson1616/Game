@@ -1,9 +1,13 @@
-import express from 'express';
+const express = require('express');
+const models = require('../models/index');
 
 const router = express.Router();
 
-router.get('/', function(req, res) {
-    res.send('welcome to api');
+const Area = models.Area;
+
+router.get('/', async function(req, res) {
+    const areas = await Area.findAll();
+    res.send(areas);
 });
 
-export default router;
+module.exports = router;
