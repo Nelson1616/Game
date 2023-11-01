@@ -34,6 +34,10 @@ app.use('/css', [
     express.static('./public/css')
 ]);
 
+app.use('/webfonts', [
+    express.static('./node_modules/@fortawesome/fontawesome-free/webfonts')
+]);
+
 app.use('/api', apiRouter);
 app.use('/', appRouter);
 
