@@ -22,7 +22,8 @@
   },
   "homepage": "https://github.com/Nelson1616/Game#readme",
   "dependencies": {
-    "express": "^4.18.2"
+    "express": "^4.18.2",
+    "express-handlebars": "^7.1.2"
   },
   "devDependencies": {
     "eslint": "^8.52.0",
