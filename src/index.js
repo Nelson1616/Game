@@ -19,6 +19,10 @@ app.use('/images', [
     express.static('./public/images')
 ]);
 
+app.use('/css', [
+    express.static('./public/css')
+]);
+
 app.use('/api', apiRouter);
 app.use('/', appRouter);
 
