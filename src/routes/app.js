@@ -12,4 +12,8 @@ router.get('/', function(req, res) {
     res.render('about', {});
 });
 
+router.get('/game', function(req, res) {
+    res.render('game', {});
+});
+
 export default router;
