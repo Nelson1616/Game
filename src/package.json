@@ -1,0 +1,32 @@
+{
+  "name": "trex.game",
+  "version": "1.0.0",
+  "description": "application for trex game developed for web programing at ufam",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "npx nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Nelson1616/Game.git"
+  },
+  "keywords": [
+    "trex",
+    "game"
+  ],
+  "author": "nelson16.code@gmail.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Nelson1616/Game/issues"
+  },
+  "homepage": "https://github.com/Nelson1616/Game#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "eslint": "^8.52.0",
+    "nodemon": "^3.0.1"
+  },
+  "type": "module"
+}
