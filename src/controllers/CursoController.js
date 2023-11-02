@@ -32,7 +32,8 @@ class CursoController {
         const curso = await models.Curso.findOne({
             where: {
                 id: req.params.id
-            }
+            },
+            include: models.Area
         })
 
         res.render('curso/show', {
