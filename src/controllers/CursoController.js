@@ -27,6 +27,30 @@ class CursoController {
 
         res.redirect('/curso')
     }
+
+    static async show(req, res) {
+        const curso = await models.Curso.findOne({
+            where: {
+                id: req.params.id
+            }
+        })
+
+        res.render('curso/show', {
+            curso: curso.toJSON()
+        });
+
+        // res.send(curso);
+    }
+
+    static async destroy(req, res) {
+        await models.Curso.destroy({
+            where: {
+                id: req.params.id
+            }
+        })
+
+        res.redirect('/curso')
+    }
 }
 
 module.exports = CursoController;

@@ -1,0 +1,16 @@
+<div class="container">
+    <h1>{{curso.sigla}}</h1>
+
+    <p> <b>Nome: </b> {{curso.nome}} </p>
+
+    <p> <b>Area: </b> {{curso.nome}} </p>
+
+    <p> <b>Descricao: </b></p>
+
+    <p>{{curso.descricao}}</p>
+
+    <form action="/curso/delete/{{curso.id}}" method="post">
+        <button type="submit">Deletar</button>
+    </form>
+
+</div>
