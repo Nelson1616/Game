@@ -1,0 +1,35 @@
+<div class="container">
+    <h1>Adicionar Curso</h1>
+
+    <form action="/curso" method="POST">
+
+        <label for="sigla">Sigla</label>
+        <br>
+        <input type="text" name="sigla">
+        <br>
+
+        <label for="nome">Nome</label>
+        <br>
+        <input type="text" name="nome">
+        <br>
+
+        <label for="descricao">Descricao do curso</label>
+        <br>
+        <textarea name="descricao" id="" cols="30" rows="10"></textarea>
+        <br>
+
+        <h2>Area do Conhecimento</h2>
+        <select name="areaId" id="">
+            {{#each areas}}
+            <option value="{{id}}">{{nome}}</option>
+            {{/each}}
+        </select>
+
+        <br>
+        <br>
+
+        <button type="submit">Cadastrar</button>
+
+    </form>
+
+</div>

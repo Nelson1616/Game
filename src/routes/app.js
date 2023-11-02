@@ -1,6 +1,7 @@
 const express = require('express');
 
 const AreaController = require('../controllers/AreaController');
+const CursoController = require('../controllers/CursoController');
 
 const router = express.Router();
 
@@ -19,5 +20,9 @@ router.get('/game', function(req, res) {
 });
 
 router.get('/area', AreaController.index);
+
+router.get('/curso', CursoController.index);
+router.get('/curso/create', CursoController.create);
+router.post('/curso/', CursoController.store);
 
 module.exports = router;
