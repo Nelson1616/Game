@@ -26,5 +26,7 @@ router.get('/curso/create', CursoController.create);
 router.post('/curso/', CursoController.store);
 router.get('/curso/:id', CursoController.show);
 router.post('/curso/delete/:id', CursoController.destroy);
+router.get('/curso/edit/:id', CursoController.edit);
+router.post('/curso/update/', CursoController.update);
 
 module.exports = router;

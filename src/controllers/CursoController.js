@@ -52,6 +52,40 @@ class CursoController {
 
         res.redirect('/curso')
     }
+
+    static async edit(req, res) {
+        const curso = await models.Curso.findOne({
+            where: {
+                id: req.params.id
+            },
+            include: models.Area
+        })
+
+        const areas = await models.Area.findAll();
+
+        res.render('curso/edit', {
+            curso: curso.toJSON(),
+            areas: areas.map(area => area.toJSON())
+        });
+
+        // res.send(areas);
+    }
+
+    static async update(req, res) {
+        await models.Curso.update({
+            sigla: req.body.sigla,
+            nome: req.body.nome,
+            descricao: req.body.descricao,
+            areaId: req.body.areaId,
+        },
+            {
+            where: {
+                id: req.body.id
+            }
+        })
+
+        res.redirect('/curso/' + req.body.id)
+    }
 }
 
 module.exports = CursoController;
